@@ -1,0 +1,29 @@
+1) 2pts
+       0 = garbage
+       1 = vaguely good but not perfect
+       2 = perfect
+
+2) 3pts
+   Do not worry if your colors are a little different from mine.
+       0 = garbage
+       1 = okay, 
+           but there's lots of noise in the image 
+           because you've been careless about data types
+       2 = really good, but you have a difference missing or minor noise
+       3 = perfect
+
+3) 5pts 
+   For full credit, it is important you have NOT cut off Tomas Haake's arm.
+   It is also important that you have minimal green halo (some is fine).
+
+   If you couldn't put the minion on Meshuggah, 
+   and just removed the green screen from the minion...
+       0 = garbage
+       1 = you have attempted to remove the green screen, and done poorly
+       2 = you have successfully made the green screen black with minimal halo
+
+   Hopefully, you put the minion onto Meshuggah...
+       3 = Tomas Haake's arm is missing
+       4 = minor imperfections that the grader thinks deserve punishment
+           (like really quite a lot of halo left over)
+       5 = perfect

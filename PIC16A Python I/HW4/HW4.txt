@@ -1,0 +1,124 @@
+d = StructureDict({1:1, 2:2.0, 3:'3'})
+print(d[1], d)
+
+d[4] = 'four'
+print(d)
+
+del d[4]
+print(d)
+
+print(3 in d)
+print('3' in d)
+
+for k in d:
+	print(k, repr(d[k]))
+
+
+
+# How is print(d) processed?
+# print(StructuredDict.__str__(d))
+# print(str(d.__d))
+# print(d.__d)
+
+# How is var = d[1] processed?
+# var = StructuredDict.__getitem__(d, 1)
+# var = d.__d[1]
+
+# How is del d[4] processed?
+# StructuredDict.__delitem__(d, 4)
+# del d.__d[4]
+
+# How is d[4] = 'four' processed?
+# StructuredDict.__setitem__(d, 4, 'four')
+# d.__d[4] = 'four'
+
+# How is print(3 in d) processed?
+# print(StructuredDict.__contains__(3))
+
+
+
+
+
+
+
+
+
+
+
+struct Rectangle {
+	double len1;
+	double len2;
+
+	Rectangle(double _len1, double _len2)
+	 		: len1(_len1), len2(_len2) {}
+           
+	double area() { return len1 * len2; }
+};
+
+
+
+
+
+
+
+
+
+
+
+# consequence of super().__init__(d)?
+# self.__d = d
+
+# How is self['len1'] processed?
+# Rectangle.__getitem__(self, 'len1') ?
+# Rectangle inherits __getitem__, so...
+# StructuredDict.__getitem__(self, 'len1')
+# self.__d['len1']
+
+
+
+
+
+
+
+
+
+
+
+
+# How is del r['len1'] processed?
+# Rectangle.__delitem__(r, 'len1') ?
+# Rectangle inherits __delitem__, so...
+# StructuredDict.__delitem__(r, 'len1')
+
+# Don't want a delete to happen.
+# Can't delete member variables in C++.
+# raise a DeleteError...
+# FIX __delitem__!
+# FIX DeleteError so error message
+# is better.
+
+
+
+
+
+
+
+
+
+# How is r['len1'] = 2 processed?
+# Rectangle.__setitem__(r, 'len1', 2) ?
+# Rectangle inherits __setitem__, so...
+# StructuredDict.__setitem__(r, 'len1', 2)
+
+# To check this is okay need to check
+# Rectangle.key_to_type.
+# 'len1' should be a float.
+# It's an int.
+# raise an UpdateValueError
+# FIX __setitem__
+# FIX UpdateValueError so error message
+# is better.
+
+# How to access Rectangle.key_to_type
+# when in definition of __setitem__ ?
+# Use self.__class__.key_to_type.
